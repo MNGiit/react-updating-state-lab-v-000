@@ -26,7 +26,7 @@ export default class YouTubeDebugger extends React.Component {
         bitrate: 12
       }
     });
-  };
+  }
 
   // update video resolution when '.resolution' button is clicked
   changeResolution = () => {
