@@ -20,4 +20,4 @@ export default class DigitalClicker extends React.Component {
       <button onClick={this.addClick}>{this.state.timesClicked}</button>
     );
   }
-}
+};
