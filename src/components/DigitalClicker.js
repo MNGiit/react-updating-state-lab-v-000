@@ -5,19 +5,19 @@ export default class DigitalClicker extends React.Component {
     super();
 
     this.state = {
-      totalClicks: 0,
+      timesClicked: 0,
     };
   }
 
   addClick = () => {
     this.setState(prevState => ({
-      totalClicks: prevState.totalClicks+1
+      timesClicked: prevState.timesClicked + 1
     }))
   }
 
   render() {
     return (
-      <button onClick={this.addClick}>{this.state.totalClicks}</button>
+      <button onClick={this.addClick}>{this.state.timesClicked}</button>
     );
   }
 }
