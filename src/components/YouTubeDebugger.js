@@ -4,7 +4,8 @@ import React from 'react';
 export default class YouTubeDebugger extends React.Component {
   constructor() {
     super();
-
+    
+    // initial state
     this.state = {
       errors: [],
       user: null,
@@ -17,7 +18,8 @@ export default class YouTubeDebugger extends React.Component {
     };
   }
 
-  handleChangeBitrate = () => {
+  // update birate when '.bitrate' button is clicked
+  changeBitrate = () => {
     this.setState({
       settings: {
         ...this.state.settings,
@@ -26,7 +28,8 @@ export default class YouTubeDebugger extends React.Component {
     });
   };
 
-  handleChangeResolution = () => {
+  // update video resolution when '.resolution' button is clicked
+  changeResolution = () => {
     this.setState({
       settings: {
         ...this.state.settings,
@@ -43,10 +46,10 @@ export default class YouTubeDebugger extends React.Component {
   render() {
     return (
       <div>
-        <button className="bitrate" onClick={this.handleChangeBitrate}>
+        <button className="bitrate" onClick={this.changeBitrate}>
           Change bitrate
         </button>
-        <button className="resolution" onClick={this.handleChangeResolution}>
+        <button className="resolution" onClick={this.changeResolution}>
           Change resolution
         </button>
       </div>
